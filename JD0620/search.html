@@ -1,0 +1,2604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品搜索-京东</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!--<script src="js/jquery-1.9.0.min.js"></script>-->
+    <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="js/search.js"></script>
+</head>
+<body>
+<link rel="stylesheet" href="css/search.css">
+<div id="short-cut">
+    <div class="w">
+        <ul class="fl">
+            <li id="city" class="city">
+                <div class="address">
+                    <span>送至：</span>
+                    <span>北京</span>
+                    <i class="ci-right"><s>◇</s></i>
+                </div>
+                <div class="mycity">
+                    <ul>
+                        <li><a href="#">北京</a></li>
+                        <li><a href="#">上海</a></li>
+                        <li><a href="#">河北</a></li>
+                        <li><a href="#">重庆</a></li>
+                        <li><a href="#">天津</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul class="fr">
+            <li>
+                <a href="#">你好，请登录</a>
+                <a href="#" style="color:#c81623;">免费注册</a>
+            </li>
+            <li class="spacer"></li>
+            <li><a href="#">我的订单</a></li>
+            <li class="spacer"></li>
+            <li id="myjd">
+                <div><a href="#">我的京东</a><i class="ci-right"><s>◇</s></i></div>
+                <div class="myjd-drop">
+                    <ul>
+                        <li>待处理订单</li>
+                        <li>消息</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li><a href="#">京东会员</a></li>
+            <li class="spacer"></li>
+            <li>
+                <div><a href="#">企业采购</a></div>
+            </li>
+            <li class="spacer"></li>
+            <li id="service">
+                <div><a href="#">客户服务</a><i class="ci-right"><s>◇</s></i></div>
+                <div class="service-drop"></div>
+            </li>
+            <li class="spacer"></li>
+            <li id="netnav">
+                <div><a href="#">网站导航</a>
+                    <i class="ci-right"><s>◇</s></i></div>
+                <div class="netnav-drop"></div>
+            </li>
+            <li class="spacer"></li>
+            <li><a href="#">手机京东</a></li>
+        </ul>
+    </div>
+</div>
+<div class="header" style="height:100px">
+    <div class="header-inner">
+      <!--京东图标-->
+      <div class="logo">
+        <a href="main.html" style="display:block"><img src="img-s/logo.PNG"></a>
+    </div>
+      <!--搜索框-->
+      <div id="search">
+        <div class="search-m">
+            <div id="shelper"></div>
+            <ul class="search-drop">
+                <li>
+                    <div class="search-item">
+                        笔记本 文具
+                    </div>
+                    <div class="search-count">
+                        约198703个商品
+                    </div>
+                </li>
+                <li>
+                    <div class="search-item">
+                        笔记本 电脑
+                    </div>
+                    <div class="search-count">
+                        约1963个商品
+                    </div>
+                </li>
+            </ul>
+            <div class="form">
+                <input type="text" class="text">
+                <span class="photo-search-btn">
+                        <img src="img-s/photo-search.PNG"></span>
+                <button class="button">
+                    搜索
+                </button>
+            </div>
+        </div>
+    </div>
+      <!--购物车-->
+      <div class="shopcar">
+        <div class="shopcar-icon">
+            <i class="ci-count">0</i>
+            <img src="img/shopcar.PNG">
+            <a href="#">我的购物车</a>
+        </div>
+        <div class="white"></div>
+        <div class="shopcar-drop">
+            <div class="car-drop">
+                <div class="car-drop-h">
+                    <h5>最新加入的商品</h5>
+                </div>
+                <div class="car-drop-m">
+                    <ul class="car-list">
+                        <li class="car-item">
+                            <div class="car-inner">
+                                <div class="car-img">
+                                    <a href="#"><img src="img/shop-car1"></a>
+                                </div>
+                                <div class="car-name">
+                                    <a href="#">一叶子面膜 水光新颜面膜，补水美白套装 </a>
+                                </div>
+                                <div class="car-info">
+                                    <div class="price">￥89.00</div>
+                                    <a href="#">删除</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="car-drop-b">
+                    <div class="sum">
+                        共<span>1</span>件商品，共计<span>￥89.00</span>
+                    </div>
+                    <a href="#" class="buy-car" style="color:#fff;">去购物车</a>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!--搜索框下面的热门-->
+      <div id="hotwords">
+        <a href="#">6.18元秒杀</a>
+        <a href="#">领券199-199</a>
+        <a href="#">京东服装</a>
+        <a href="#">孕妇装</a>
+        <a href="#">钻石</a>
+        <a href="#">399减200</a>
+    </div>
+    </div>
+</div>
+<!--搜索导航栏-->
+<div id="nav">
+    <div class="nav-inner">
+        <!--左边二级菜单-->
+        <div class="cate">
+            <!--全部商品分类-->
+            <div class="dt">
+                <a href="#">
+                    全部商品分类
+                    <i class="ci-right"><s>◇</s></i>
+                </a>
+            </div>
+            <!--二级下拉-->
+            <div class="dd">
+                <ul class="cate-menu">
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">家用电器</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">手机/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">运营商/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">数码</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">电脑/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">办公/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">家居/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">家具/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">家装/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">厨具</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">男装/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">女装/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">童装/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">内衣</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">美妆个护/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">宠物</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">女鞋/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">箱包/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">钟表/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">珠宝</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">男鞋/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">运动/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">户外</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">汽车/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">汽车用品</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">母婴/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">玩具乐器</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">食品/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">酒类/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">生鲜/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">特产</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">礼品鲜花/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">农资绿制</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">医药保健/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">计生情趣</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">图书/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">音像/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">电子书</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">机票/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">酒店/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">旅游/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">生活</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cate-menu-li">
+                        <a class="cate-menu-a" href="#">理财/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">众筹/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">白条/</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="cate-menu-a" href="#">保险</a>
+                        <div class="cate-drop">
+                            <div class="cate-part">
+                                <div class="cate-part-col1">
+                                    <div class="cate-channel">
+                                        <a class="cate-channel-a" href="#">618海狗</a>
+                                        <a class="cate-channel-a" href="#">家电馆</a>
+                                        <a class="cate-channel-a" href="#">家电服务</a>
+                                        <a class="cate-channel-a" href="#">商用电器</a>
+                                    </div>
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="#">电视</a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a class="cate-detail-con-hot cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">曲面电视</a>
+                                                <a class="cate-detail-con-a" href="#">超薄电视</a>
+                                                <a class="cate-detail-con-a" href="#">液晶电视</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="cate-part-col2">
+                                    <div class="cate-brand">
+                                        <a href="#"><img src="img/brand1.jpg"></a>
+                                        <a href="#"><img src="img/brand2.jpg"></a>
+                                        <a href="#"><img src="img/brand4.jpg"></a>
+                                    </div>
+                                    <div class="cate-promotion">
+                                        <a href="#"><img src="img/promotion1.jpg"></a>
+                                        <a href="#"><img src="img/promotion2.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右边的一行-->
+        <div class="nav-items">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">服装城</a></li>
+                <li><a href="#">美术馆</a></li>
+                <li><a href="#">京东超市</a></li>
+                <li><a href="#">生鲜</a></li>
+                <li><a href="#">全球购</a></li>
+                <li><a href="#">闪购</a></li>
+                <li><a href="#">拍卖</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="j-search">
+    <div class="j-searchbar">
+        <div style="float:left">全部结果 ></div>
+        <div style="float:left"><strong>"笔记本文具"</strong></div>
+    </div>
+    <!--搜索内容-->
+    <div class="j-container">
+        <!--关键字品牌分类-->
+        <div class="j-selector">
+            <div class="j-selectorline">
+                <div class="sl-wrap">
+                    <div class="sl-key"><strong>品牌：</strong></div>
+                    <div class="sl-value">
+                        <ul class="sl-value-list">
+                            <li><a href="#">得力(deli)</a></li>
+                            <li><a href="#">广博</a></li>
+                            <li><a href="#">晨光(M&G)</a></li>
+                            <li><a href="#">国语</a></li>
+                            <li><a href="#">齐心</a></li>
+                            <li><a href="#">狼姐(longe)</a></li>
+                            <li><a href="#">kinbor</a></li>
+                        </ul>
+                    </div>
+                    <div class="sl-ext">
+                        <a href="#" class="sl-ext-more">
+                            更多<i class="ci-right"><s>◇</s></i>
+                        </a>
+                        <a href="#"></a>
+                        <a href="#" class="sl-ext-multiple">
+                            多选<i>＋</i>
+                        </a>
+                        <a href="#"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="j-selectorline">
+                <div class="sl-wrap">
+                    <div class="sl-key"><strong>文具/耗材：</strong></div>
+                    <div class="sl-value">
+                        <ul class="sl-value-list">
+                            <li><a href="#">学生文具</a></li>
+                            <li><a href="#">办公</a></li>
+                            <li><a href="#">画具材质</a></li>
+                            <li><a href="#">国语</a></li>
+                        </ul>
+                    </div>
+                    <div class="sl-ext">
+                        <a href="#" class="sl-ext-more">
+                            更多<i class="ci-right"><s>◇</s></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="j-selectorline">
+                <div class="sl-wrap">
+                    <div class="sl-key">分类：</div>
+                    <div class="sl-value">
+                        <ul class="sl-value-list">
+                            <li><a href="#">线圈本</a></li>
+                            <li><a href="#">活页本</a></li>
+                            <li><a href="#">皮面本</a></li>
+                            <li><a href="#">国语</a></li>
+                        </ul>
+                    </div>
+                    <div class="sl-ext">
+                        <a href="#" class="sl-ext-more">
+                            更多<i class="ci-right"><s>◇</s></i>
+                        </a>
+                        <a href="#"></a>
+                        <a href="#" class="sl-ext-multiple">
+                            多选<i>＋</i>
+                        </a>
+                        <a href="#"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="j-selectorline">
+                <div class="sl-wrap">
+                    <div class="sl-key">数量：</div>
+                    <div class="sl-value">
+                        <ul class="sl-value-list">
+                            <li><a href="#">单个装</a></li>
+                            <li><a href="#">2-10个装</a></li>
+                            <li><a href="#">10个以上</a></li>
+                        </ul>
+                    </div>
+                    <div class="sl-ext">
+                        <a href="#" class="sl-ext-more">
+                            更多<i class="ci-right"><s>◇</s></i>
+                        </a>
+                        <a href="#"></a>
+                        <a href="#" class="sl-ext-multiple">
+                            多选<i>＋</i>
+                        </a>
+                        <a href="#"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="j-selectorline">
+                <div class="sl-wrap">
+                    <div class="sl-key">高级选项：</div>
+                    <div class="sl-value">
+                        <a href="#" class="trig-item">
+                            <span class="text">封面硬度</span>
+                            <i class="ci-right" style="left:60px;top:11px"><s>◇</s></i>
+
+                        </a>
+                        <a href="#" class="trig-item">
+                            <span class="text">规格</span>
+                            <i class="ci-right" style="left:32px;top:11px"><s>◇</s></i>
+                        </a>
+                        <a href="#" class="trig-item">
+                            <span class="text">大家说</span>
+                            <i class="ci-right" style="left:47px;top:11px"><s>◇</s></i>
+                        </a>
+                        <a href="#" class="trig-item">
+                            <span class="text">其他分类</span>
+                            <i class="ci-right" style="left:61px;top:11px"><s>◇</s></i>
+                        </a>
+                    </div>
+                    <div class="text-drop">
+                       <ul class="sl-value-list">
+                           <li><a href="#">软面抄</a></li>
+                           <li><a href="#">软面抄</a></li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--商品展示-->
+        <div class="j-main">
+            <!--左侧竖栏-->
+            <div class="j-aside">
+                <div class="mt"><h3>商品精选</h3></div>
+                <div class="mc">
+                    <ul>
+                        <li>
+                            <div class="s-img">
+                                <a href="#"><img src="img-s/s-img.png"></a>
+                            </div>
+                            <div class="s-price">
+                                <strong>￥15.00</strong>
+                            </div>
+                            <div class="s-name">
+                                <a href="#">
+                                    广博10本装40页办公记事本日记本
+                                </a>
+                            </div>
+                            <div class="s-comm">
+                                已有<span style="color:#005aa0">94277</span>
+                                人评价
+                            </div>
+                        </li>
+                        <li>
+                            <div class="s-img">
+                                <a href="#"><img src="img-s/s-img.png"></a>
+                            </div>
+                            <div class="s-price">
+                                <strong>￥15.00</strong>
+                            </div>
+                            <div class="s-name">
+                                <a href="#">
+                                    广博10本装40页办公记事本日记本
+                                </a>
+                            </div>
+                            <div class="s-comm">
+                                已有<span style="color:#005aa0">94277</span>
+                                人评价
+                            </div>
+                        </li>
+                        <li>
+                            <div class="s-img">
+                                <a href="#"><img src="img-s/s-img.png"></a>
+                            </div>
+                            <div class="s-price">
+                                <strong>￥15.00</strong>
+                            </div>
+                            <div class="s-name">
+                                <a href="#">
+                                    广博10本装40页办公记事本日记本
+                                </a>
+                            </div>
+                            <div class="s-comm">
+                                已有<span style="color:#005aa0">94277</span>
+                                人评价
+                            </div>
+                        </li>
+                        <li>
+                            <div class="s-img">
+                                <a href="#"><img src="img-s/s-img.png"></a>
+                            </div>
+                            <div class="s-price">
+                                <strong>￥15.00</strong>
+                            </div>
+                            <div class="s-name">
+                                <a href="#">
+                                    广博10本装40页办公记事本日记本
+                                </a>
+                            </div>
+                            <div class="s-comm">
+                                已有<span style="color:#005aa0">94277</span>
+                                人评价
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--右侧内容-->
+            <div class="j-list">
+                <!--上面两栏-->
+                <div class="j-filter">
+                   <div class="f-line top">
+                       <div class="f-sort">
+                           <a href="#" class="check">综合</a>
+                           <a href="#">销量</a>
+                           <a href="#">评论数</a>
+                           <a href="#">新品</a>
+                           <a href="#">价格</a>
+                       </div>
+                       <div class="f-data">
+                           <a href="#" class="fd-item" data-tips="11%的用户喜欢的价位">
+                               <span class="fd-item-inner" style="height:23%"></span>
+                           </a>
+                           <a href="#" class="fd-item">
+                               <span class="fd-item-inner" style="height:64%"></span>
+                           </a>
+                           <a href="#" class="fd-item">
+                               <span class="fd-item-inner" style="height:85%"></span>
+                           </a>
+                           <a href="#" class="fd-item">
+                               <span class="fd-item-inner" style="height:30%"></span>
+                           </a>
+                           <a href="#" class="fd-item">
+                               <span class="fd-item-inner" style="height:13%"></span>
+                           </a>
+                       </div>
+                       <div class="f-selpri">
+                             <div class="f-price-set">
+                                 <div style="float:left">
+                                     <input class="set-text" value="￥">
+                                 </div>
+                                 <em>-</em>
+                                 <div style="float:left">
+                                     <input class="set-text" value="￥">
+                                 </div>
+                             </div>
+                            <div class="f-price-edit">
+                                <div class="f-price-set" style="margin-top:-31px;position:absolute">
+                                    <div style="float:left">
+                                        <input class="set-text" value="￥">
+                                    </div>
+                                    <em>-</em>
+                                    <div style="float:left">
+                                        <input class="set-text" value="￥">
+                                    </div>
+                                </div>
+                                <a class="item1" href="#">清空</a>
+                                <a class="item2" href="#" style=" color: #333;">确定</a>
+                            </div>
+                       </div>
+                       <div class="f-sum"></div>
+                   </div>
+                   <div class="f-line">
+                       <div class="f-store">
+                           <div class="f-store-loc">配送至</div>
+                           <div class="f-store-sel">
+                               <div class="sel-text">
+                                   <span>北京海淀区三环到四环之间</span>
+                                   <i class="ci-right" style="top:9px;left:168px;"><s>◇</s></i>
+                               </div>
+                               <div id="addressInfo">
+                                   <div class="selectAddress area">
+                                       <ul style="overflow:hidden">
+                                           <li class="float"><a href="#tabs-1" class="provinces">省份</a></li>
+                                       </ul>
+                                       <div id="tabs-1" class="region">
+                                           <ul>
+
+                                           </ul>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="f-feature">
+                         <ul>
+                             <li><a href="#"><i></i>京东配送</a></li>
+                             <li><a href="#"><i></i>货到付款</a></li>
+                             <li><a href="#"><i></i>仅显示有货</a></li>
+                             <li><a href="#"><i></i>可配送全球</a></li>
+                         </ul>
+                       </div>
+                       <div class="f-search">
+                           <input type="text" class="input-text" value="在结果中搜索">
+                           <a class="btn" href="#">确定</a>
+                       </div>
+                   </div>
+                </div>
+                <!--下面商品-->
+                <div class="good-list">
+                    <ul>
+                        <li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list1.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                      <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                      <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                      <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li><li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list2.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li><li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list1.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list2.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li><li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list1.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li><li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list2.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list1.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li><li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list2.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li><li>
+                        <div class="good">
+                            <div class="g-img">
+                                <a href="#"><img src="img-s/good-list1.png"></a>
+                            </div>
+                            <div class="g-price">
+                                ￥25.00
+                            </div>
+                            <div class="g-name">
+                                <a href="#">
+                                    得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                    【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                </a>
+                            </div>
+                            <div class="g-comm">
+                                已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                            </div>
+                            <div class="g-shop">
+                                <a href="#" style="height:30px;">
+                                    <span class="g-shop-span">得利官方旗舰店</span>
+                                    <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                            </div>
+                            <div class="g-operate">
+                                <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                            </div>
+                        </div>
+                    </li>
+                        <li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list2.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li><li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list1.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li><li>
+                            <div class="good">
+                                <div class="g-img">
+                                    <a href="#"><img src="img-s/good-list2.png"></a>
+                                </div>
+                                <div class="g-price">
+                                    ￥25.00
+                                </div>
+                                <div class="g-name">
+                                    <a href="#">
+                                        得力（deli）7653-A5/60页无线装订本记事本 软抄本 笔记本子 10本装
+                                        【高能提示】得力品质返场，热销文具不止满减，戳右边链接，火速直达！！！【火速直达>>】(此商品不参加上述活动)
+                                    </a>
+                                </div>
+                                <div class="g-comm">
+                                    已有<a href="#" style="display:inline-block">9.4万+</a>条评价
+                                </div>
+                                <div class="g-shop">
+                                    <a href="#" style="height:30px;">
+                                        <span class="g-shop-span">得利官方旗舰店</span>
+                                        <img src="img-s/g-shop.PNG" class="g-shop-img"></a>
+                                </div>
+                                <div class="g-operate">
+                                    <a href="#" class="g-btn"><i class=""></i>对比</a>
+                                    <a href="#" class="g-btn"><i class=""></i>关注</a>
+                                    <a href="#" class="g-btn"><i class=""></i>加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--商品换页-->
+                <div class="bottom">
+                    <div class="j-page">
+                        <span class="p-last">
+                            <a href="#" class="disable">上一页</a>
+                        </span>
+                        <span class="p-num">
+                            <a href="#" class="curr">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <b class="p-more">...</b>
+                        </span>
+                        <span class="p-next">
+                            <a href="#">下一页</a>
+                        </span>
+                        <span class="p-skip">
+                            <em>共<b>100</b>页&nbsp;&nbsp;到第</em>
+                            <input class="p-skip-text" value="1"> <em>页</em>
+                            <a href="#" class="p-skip-btn">确定</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

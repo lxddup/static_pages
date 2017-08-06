@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账户设置</title>
+    <link rel="stylesheet" href="css/account_management.css"/>
+    <link rel="stylesheet" href="css/myOrder.css"/>
+    <link rel="stylesheet" href="css/address.css"/>
+    <link rel="stylesheet" href="css/personal_info.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/address.js"></script>
+    <script src="js/myOrder.js"></script>
+    <script src="js/personal_info.js"></script>
+    <script src="js/account_management.js"></script>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+<!--头-->
+<div class="byj_nav">
+    <div class="byj_nav_main byj_addr_main">
+        <div class="byj_nav_main_logo">
+            <a href="#"><img src="img/img_order/logo.png"/></a>
+
+            <div class="byj_nav_main_logo_r">
+                <a class="byj_a1" href="#">我的京东</a>
+                <a class="byj_a2" href="#">返回京东首页</a>
+            </div>
+        </div>
+        <div class="byj_nav_main_bar">
+            <ul class="byj_n_ul">
+                <li class="byj_nav_main_bar_li1"><a class="byj_a3" href="main.html">首页</a></li>
+                <li class="byj_nav_main_bar_li2">
+                    <div class="byj_nav_main_bar_div">
+                        <span>账户设置</span><span id="byj_icon_one" class="byj_icon byj_icon_one"></span>
+
+                        <div class="byj_bar_more">
+                            <ul class="byj_nav_main_bar_div_ul byj_n_ul">
+                                <li><a href="#">个人信息</a></li>
+                                <li><a href="#">账户安全</a></li>
+                                <li><a href="#">账户绑定</a></li>
+                                <li><a href="#">我的级别</a></li>
+                                <li><a href="#">收货地址</a></li>
+                                <li><a href="#">用药人信息</a></li>
+                                <li><a href="#">分享绑定</a></li>
+                                <li><a href="#">邮件订阅</a></li>
+                                <li><a href="#">消费记录</a></li>
+                                <li><a href="#">应用授权</a></li>
+                                <li><a href="#">快捷支付</a></li>
+                                <li><a href="#">增票资质</a></li>
+                                <li><a href="#">企业发票</a></li>
+                                <li><a href="#">采购需求单</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="byj_nav_main_bar_li2">
+                    <div class="byj_nav_main_bar_div">
+                        <span> 社区</span><span id="byj_icon_two" class="byj_icon byj_icon_one"></span>
+
+                        <div class="byj_bar_more">
+                            <ul class="byj_nav_main_bar_div_ul byj_n_ul">
+                                <li><a href="#">个人主页</a></li>
+                                <li><a href="#">我的活动</a></li>
+                                <li><a href="#">我的圈子</a></li>
+                                <li><a href="#">我的帖子</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="byj_nav_main_bar_li1"><a class="byj_a3" href="#">消息</a></li>
+            </ul>
+        </div>
+        <div class="byj_nav_r">
+            <div class="byj_nav_r_main byj_nav_r_search">
+                <input id="byj_search" class="byj_search" type="text"/>
+                <button id="byj_search_btn" class="byj_search_btn" type="button">搜索</button>
+            </div>
+            <div class="byj_car_all">
+                <div class="byj_nav_r_main byj_car">
+                    <div class="byj_shoppingcar">
+                        <span id="byj_car_img" class="byj_icon byj_car_img"></span>
+                        <span id="byj_goods" class="byj_goods">0</span>
+                        <a href="#"><span>我的购物车</span></a>
+                        <span class="byj_car_r">></span>
+                    </div>
+                </div>
+                <div class="byj_shoppingcar_detail">
+                    <div class="byj_shoppingcar_detail_head">
+                        <h4>最新加入的商品</h4>
+                    </div>
+                    <div class="byj_shoppingcar_detail_body">
+                        <ul id="byj_s_d_b_ul" class="byj_n_ul">
+                            <li>
+                                <div class="byj_s_d_b_img">
+                                    <a href="#">
+                                        <img src="img/img_order/book.jpg"/>
+                                    </a>
+                                </div>
+                                <div class="byj_s_d_b_name">
+                                    <a href="#">JavaScript高级程序设计（第3版）</a>
+                                </div>
+                                <div class="byj_s_d_b_price">
+                                    <span><b>￥82.00元×1</b></span>
+                                    <a class="byj_s_d_b_delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="byj_s_d_b_img">
+                                    <a href="#">
+                                        <img src="img/img_order/book.jpg"/>
+                                    </a>
+                                </div>
+                                <div class="byj_s_d_b_name">
+                                    <a href="#">JavaScript高级程序设计（第3版）</a>
+                                </div>
+                                <div class="byj_s_d_b_price">
+                                    <span><b>￥82.00元×1</b></span>
+                                    <a class="byj_s_d_b_delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="byj_s_d_b_img">
+                                    <a href="#">
+                                        <img src="img/img_order/book.jpg"/>
+                                    </a>
+                                </div>
+                                <div class="byj_s_d_b_name">
+                                    <a href="#">JavaScript高级程序设计（第3版）</a>
+                                </div>
+                                <div class="byj_s_d_b_price">
+                                    <span><b>￥82.00元×1</b></span>
+                                    <a class="byj_s_d_b_delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="byj_s_d_b_img">
+                                    <a href="#">
+                                        <img src="img/img_order/book.jpg"/>
+                                    </a>
+                                </div>
+                                <div class="byj_s_d_b_name">
+                                    <a href="#">JavaScript高级程序设计（第3版）</a>
+                                </div>
+                                <div class="byj_s_d_b_price">
+                                    <span><b>￥82.00元×1</b></span>
+                                    <a class="byj_s_d_b_delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="byj_s_d_b_img">
+                                    <a href="#">
+                                        <img src="img/img_order/book.jpg"/>
+                                    </a>
+                                </div>
+                                <div class="byj_s_d_b_name">
+                                    <a href="#">JavaScript高级程序设计（第3版）</a>
+                                </div>
+                                <div class="byj_s_d_b_price">
+                                    <span><b>￥82.00元×1</b></span>
+                                    <a class="byj_s_d_b_delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="byj_s_d_b_img">
+                                    <a href="#">
+                                        <img src="img/img_order/book.jpg"/>
+                                    </a>
+                                </div>
+                                <div class="byj_s_d_b_name">
+                                    <a href="#">JavaScript高级程序设计（第3版）</a>
+                                </div>
+                                <div class="byj_s_d_b_price">
+                                    <span><b>￥82.00元×1</b></span>
+                                    <a class="byj_s_d_b_delete" href="#">删除</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="byj_shoppingcar_detail_foot">
+                        <div class="byj_s_d_f_l">
+                            共<b id="byj_s_d_f_l_num">1</b>件商品 &nbsp;&nbsp;
+                            共计<b>￥</b><b id="btj_s_d_f_l_price">82.00元</b>
+                        </div>
+                        <a href="#">去购物车</a>
+
+                        <div class="cleanfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--中间部分-->
+<div class="byj_middle">
+    <!--中间-->
+    <div class="byj_middle_body byj_addr_main">
+        <!--左侧导航栏-->
+        <div class="byj_middle_body_left">
+            <ul class="byj_middle_body_menu">
+                <li class="byj_middle_body_menu_index" id="byj_m_b_index1">设置</li>
+                <li class="byj_middle_body_menu_content" id="byj_m_b_1_1"><a class="byj_middle_body_menu_content_active"
+                                                                             href="#">个人信息</a></li>
+                <li class="byj_middle_body_menu_content" id="byj_m_b_1_3"><a href="#">收货地址</a></li>
+            </ul>
+            <div class="byj_ad">
+                <a href="#"><img src="img/img_order/ad.jpg"/></a>
+            </div>
+        </div>
+        <div class="byj_acc_right">
+            <div id="byj_personal_info">
+                <div class="byj_perinfo_head">
+                    <ul class="byj_perinfo_nav">
+                        <li id="byj_pernav_li1" class="byj_perinfo_nav_li"><a class="byj_perinfo_nav_a" href="#">基本信息</a></li>
+                        <li id="byj_pernav_li2" class="byj_perinfo_nav_li"><a href="#">头像照片</a></li>
+                        <li id="byj_pernav_li3" class="byj_perinfo_nav_li"><a href="#">更多个人信息</a></li>
+                        <div class="cleanfix"></div>
+                    </ul>
+                </div>
+                <div id="byj_perinfo_basic" class="byj_perinfo_main">
+                    <div class="byj_perinfo_main_left">
+                        <div class="byj_perform">
+                            <div class="byj_peritem">
+                                <span class="byj_lable">用户名：</span>
+                                <span><b>韩梅梅</b></span>
+                            </div>
+                            <div class="byj_peritem">
+                                <span class="byj_lable"><span class="byj_import">*</span>登录名：</span>
+
+                                <div class="byj_name_text">
+                                    <span><b>韩梅梅</b></span>
+                                    <a id="byj_name_change" class="byj_a_blue" href="#">&nbsp;修改</a>
+                                </div>
+                                <div class="byj_name_input" id="byj_input1">
+                                    <span><input type="text" maxlength="20" id="byj_changename" name="byj-changename"
+                                                 value="韩梅梅"/></span>
+                                </div>
+                                <span class="byj_font#999">可用于登录，请牢记哦~</span>
+
+                                <div class="byj_tip">
+                                    <span id="byj_prompt1">支持中文、字母、数字、“-、”“_”的组合，4-20个字符</span>
+                                </div>
+                            </div>
+                            <div class="byj_peritem">
+                                <span class="byj_lable"><span class="byj_import">*</span>昵称：</span>
+
+                                <div class="byj_nameinput" id="byj_input2">
+                                    <span><input type="text" maxlength="20" id="byj_namechange" name="byj-changename"
+                                                 value="韩梅梅"/></span>
+                                </div>
+                                <div class="byj_tip">
+                                    <span id="byj_prompt2">昵称唯一性验证中，请稍等...</span>
+                                </div>
+                            </div>
+                            <div class="byj_peritem">
+                                <span class="byj_lable"><span class="byj_import">*</span>性别：</span>
+                                <div class="byj_pergender">
+                                    <input type="radio" name="sex" class="byj_radio" value="0"/>
+                                    <label class="byj_sex">男</label>
+                                    <input type="radio" name="sex" class="byj_radio" value="1"/>
+                                    <label class="byj_sex">女</label>
+                                    <input type="radio" name="sex" class="byj_radio" value="2"/>
+                                    <label class="byj_sex">保密</label>
+                                </div>
+                            </div>
+                            <div class="byj_peritem">
+                                <span class="byj_lable">生日：</span>
+                                <div class="byj_birthday">
+                                    <select name="year" id="byj_year" class="byj_data">
+                                        <option value="0" disabled selected="selected">请选择：</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1999">1999</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1990">1990</option>
+                                    </select>
+                                    <span class="byjdata">年</span>
+                                    <select name="month" id="byj_month" class="byj_data">
+                                        <option value="0" disabled selected="selected">请选择：</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <span class="byjdata">月</span>
+                                    <select name="year" id="byj_day" class="byj_data">
+                                        <option value="0" disabled selected="selected">请选择：</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                    <span class="byjdata">日</span>
+                                </div>
+                            </div>
+                            <div class="byj_peritem">
+                                <span class="byj_lable">兴趣爱好：</span>
+
+                                <div class="byj_hobby">
+                                    <p class="byj_hobby_p">请选择您感兴趣的分类，给您最精准的推荐</p>
+                                    <ul class="byj_hobby_list">
+                                        <li class="byj_hobby_type" name="byj_hobby_type1" value="1">
+                                            图书/音像/数字商品
+                                            <span class="byj_hobby_span1"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type2" value="2">
+                                            家用电器
+                                            <span class="byj_hobby_span2"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type3" value="3">
+                                            手机/数码
+                                            <span class="byj_hobby_span3"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type4" value="4">
+                                            电脑/办公
+                                            <span class="byj_hobby_span4"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type5" value="5">
+                                            家居/家具/家装/厨具
+                                            <span class="byj_hobby_span5"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type6" value="6">
+                                            服饰内衣/珠宝首饰
+                                            <span class="byj_hobby_span6"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type7" value="7">
+                                            个护化妆
+                                            <span class="byj_hobby_span7"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type8" value="8">
+                                            鞋靴/箱包/钟表/奢侈品
+                                            <span class="byj_hobby_span8"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type9" value="9">
+                                            运动健康
+                                            <span class="byj_hobby_span9"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type10" value="10">
+                                            汽车用品
+                                            <span class="byj_hobby_span10"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type11" value="11">
+                                            母婴/玩具乐器
+                                            <span class="byj_hobby_span11"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type12" value="12">
+                                            食品饮料/保健食品
+                                            <span class="byj_hobby_span12"></span>
+                                        </li>
+                                        <li class="byj_hobby_type" name="byj_hobby_type13" value="13">
+                                            彩票/旅行/充值/票务
+                                            <span class="byj_hobby_span13"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cleanfix"></div>
+                            </div>
+                            <div class="byj_peritem">
+                                <span class="byj_lable">邮箱：</span>
+                                <a class="byj_a_blue" href="#">立即验证</a>
+                            </div>
+                            <div class="byj_peritem">
+                                <span class="byj_lable"><span class="byj_import">*</span>真实姓名：</span>
+
+                                <div class="byj_nameinput" id="byj_input3">
+                                    <span><input type="text" maxlength="20" id="byj_truename"
+                                                 name="byj_truename"/></span>
+                                </div>
+                                <div class="byj_tip">
+                                    <span id="byj_prompt3">请输入真实姓名，20个英文或10个汉字</span>
+                                </div>
+                            </div>
+                            <div class="byj_peritem">
+                                <span class="byj_lable">&nbsp;</span>
+
+                                <div class="byj_per_btn" style="float: left">
+                                    <a class="byj_btn" href="#">提交</a>
+                                </div>
+                                <div class="cleanfix"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="byj_perinfo_main_right">
+                        <div id="byj_user_info" class="byj_user_info">
+                            <div class="byj_userimg">
+                                <img src="img/img_person_info/no-img_mid_.jpg"/>
+                            </div>
+                            <div class="byj_userinfo">
+                                <b>用户名：韩梅梅</b>
+
+                                <div class="byj_user_level">
+                                    <span class="byj_level_img"></span>
+                                    <a class="byj_a_blue" href="#">银牌会员</a>
+                                </div>
+                                <div class="byj_xiaobai">
+                                    小白信用 <a class="byj_a_blue" href="#">71.2 分</a>
+                                </div>
+                                <div>会员类型：个人用户</div>
+                            </div>
+                        </div>
+                        <div class="cleanfix"></div>
+                        <p class="byj_attention">
+                            注：修改手机和邮箱请到 <a href="#">账户安全</a></p>
+                    </div>
+                </div>
+                <div id="byj_perinfo_img" class="byj_perinfo_main">
+                    <div class="byj_per_info_img_left">
+                        <div class="byj_perinfo_img_left">
+                            <div class="byj_perimg_left_top">
+                                <p style="color: #999" class="byj_hobby_p">仅支持JPG、GIF、PNG、JPEG、BMP格式，文件小于4M</p>
+                            </div>
+                            <div class="byj_perimg_left_bottom">
+                                <div id="byj_img_l_bottom" class="byj_img_l_bottom">
+                                    <img id="byj_bigimg" name="byj_img" border="0"
+                                         src="img/img_person_info/no-img_mid_.jpg" onclick="$('#previewImg').click();">
+
+                                    <p class="byj_perimg_right">点击图片切换头像</p>
+                                </div>
+                                <input type="file" onchange="previewImage(this)" style="display: none;" id="previewImg">
+                            </div>
+                            <h3>推荐头像</h3>
+
+                            <div class="byj_moreimg">
+                                <ul class="byj_moreimg_ul" style="width: 480px;">
+                                    <li value="1"><img src="img/img_person_info/1.jpg" alt=""/></li>
+                                    <li value="2"><img src="img/img_person_info/1.jpg" alt=""/></li>
+                                    <li value="3"><img src="img/img_person_info/1.jpg" alt=""/></li>
+                                    <li value="4"><img src="img/img_person_info/1.jpg" alt=""/></li>
+                                    <li value="5"><img src="img/img_person_info/1.jpg" alt=""/></li>
+                                    <li value="6"><img src="img/img_person_info/1.jpg" alt=""/></li>
+                                    <li value="7"><img src="img/img_person_info/1.jpg" alt=""/></li>
+                                    <li value="8"><img src="img/img_person_info/1.jpg" alt=""/></li>
+                                    <li value="9"><img src="img/img_person_info/2.jpg" alt=""/></li>
+                                    <li value="10"><img src="img/img_person_info/2.jpg" alt=""/></li>
+                                    <li value="11"><img src="img/img_person_info/2.jpg" alt=""/></li>
+                                    <li value="12"><img src="img/img_person_info/2.jpg" alt=""/></li>
+                                    <li value="13"><img src="img/img_person_info/2.jpg" alt=""/></li>
+                                    <li value="14"><img src="img/img_person_info/2.jpg" alt=""/></li>
+                                    <li value="15"><img src="img/img_person_info/2.jpg" alt=""/></li>
+                                    <li value="16"><img src="img/img_person_info/2.jpg" alt=""/></li>
+                                </ul>
+                                <div class="cleanfix"></div>
+                                <div class="byj_mt_20">
+                                    <a class="byj_btn" href="#">保存</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="byj_perinfo_img_right">
+                        <h3>效果预览</h3>
+
+                        <div class="byj_perimg_right">
+                            你上传的图片会自动生成2种尺寸，请注意小尺寸的头像是否清晰
+                            <div class="byj_img_100">
+                                <div class="byj-img1">
+                                    <img src="" alt=""/>
+                                </div>
+                            </div>
+                            100*100像素
+                            <div class="byj_img_100 byj_img_50">
+                                <div class="byj-img2">
+                                    <img src="" alt=""/>
+                                </div>
+                            </div>
+                            50*50像素
+                        </div>
+                    </div>
+                    <div class="cleanfix"></div>
+                </div>
+                <div id="byj_perinfo_more" class="byj_perinfo_main">
+                    <div class="byj_perinfo_more">
+                        <div class="byj_per_more">
+                            <div class="byj_p_more_form">
+                                <div class="byj_peritem">
+                                    <span class="byj_lable"><span class="byj_import">*</span>婚姻状况：</span>
+                                    <div class="byj_pergender">
+                                        <input type="radio" name="maritalStatus" class="byj_radio" value="0"/>
+                                        <label class="byj_sex">未婚</label>
+                                        <input type="radio" name="maritalStatus" class="byj_radio" value="1"/>
+                                        <label class="byj_sex">已婚</label>
+                                        <input type="radio" name="maritalStatus" class="byj_radio" value="2"/>
+                                        <label class="byj_sex">保密</label>
+                                    </div>
+                                </div>
+                                <div class="byj_peritem">
+                                    <span class="byj_lable">月收入：</span>
+                                    <div class="byj_birthday">
+                                        <select name="year" id="byj_income" class="byj_data byj_w_100">
+                                            <option value>请选择：</option>
+                                            <option value="1">2000元以下</option>
+                                            <option value="2">2000-3999元</option>
+                                            <option value="3">4000-5999元</option>
+                                            <option value="4">6000-7999元</option>
+                                            <option value="5">8000元以上</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="byj_peritem">
+                                    <span class="byj_lable">身份证号码：</span>
+
+                                    <div class="byj_nameinput" id="byj_input4">
+                                    <span><input type="text" maxlength="20" id="byj_id_card" name="byj_id_card"/></span>
+                                    </div>
+                                    <div class="byj_tip">
+                                        <span id="byj_prompt4">请输入正确身份证号码！居民身份证号码为15或18位</span>
+                                    </div>
+                                </div>
+                                <div class="byj_peritem">
+                                    <span class="byj_lable">教育程度：</span>
+                                    <div class="byj_birthday">
+                                        <select name="year" id="byj_educat" class="byj_data byj_w_100">
+                                            <option value>请选择：</option>
+                                            <option value="1">初中</option>
+                                            <option value="2">高中</option>
+                                            <option value="3">中专</option>
+                                            <option value="4">大专</option>
+                                            <option value="5">本科</option>
+                                            <option value="5">硕士</option>
+                                            <option value="5">博士</option>
+                                            <option value="5">其他</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="byj_peritem">
+                                    <span class="byj_lable">所在行业：</span>
+                                    <div class="byj_birthday">
+                                        <select name="year" id="byj_work" class="byj_data byj_w_100">
+                                            <option value>请选择：</option>
+                                            <option value="1">计算机硬件及网络设备</option>
+                                            <option value="2">计算机软件</option>
+                                            <option value="3">IT服务（系统/数据/维护）/多领域经营</option>
+                                            <option value="4">互联网/电子商务</option>
+                                            <option value="5">网络游戏</option>
+                                            <option value="6">通讯（设备/运营/增值服务）</option>
+                                            <option value="7">电子技术/半导体/集成电路</option>
+                                            <option value="8">仪器仪表及工业自动化</option>
+                                            <option value="9">金融/银行/投资/基金/证券</option>
+                                            <option value="10">保险</option>
+                                            <option value="11">房地产/建筑/建材/工程</option>
+                                            <option value="12">家居/室内设计/装饰装潢</option>
+                                            <option value="13">其它</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="byj_acc_safe"></div>
+            <div id="byj_myaddress">
+                <!--右侧地址——by杨程-->
+                <div id="rightplace">
+                    <div class="rightplace">
+                        <!--新增收货地址-->
+                        <div class="myadr">
+                            <a href="javascript:" id="myadr_a" class="myadr_a myadr_btn">新增收货地址</a>
+                    <span id="myadr_span">
+                        您已创建
+                        <span class="myadr_span_t" id="myadr_span1">3</span>
+个收货地址，最多可创建
+                        <span class="myadr_span_t" id="myadr_span2">20</span>
+个
+                    </span>
+                        </div>
+                        <!--地址显示-->
+                        <div class="showadr">
+                            <!--上半部分-->
+                            <div class="showtop">
+                                <h3 class="h3">
+                                    杨程 辽宁
+                                    <a class="showtop_a"></a>
+                                    <span class="showtop_span">一键购</span>
+                                </h3>
+                                <!--上面的右面删除部分-->
+                                <div class="delete">
+                                    <a class="delete_a">删除</a>
+                                </div>
+                                <!--小扳手里面的东西-->
+                                <div class="banshou" id="banshou">
+                                    <div class="banshou1">
+                                        <input type="text" class="banshou1_ipt test">
+                                        <button class="banshou1_btn">保存</button>
+                                    </div>
+                                    <div class="banshou2">
+                                        <div class="banshou2_div">建议填写常用名称：</div>
+                                        <div class="banshou2_btn3">
+
+                                            <a href="" class="adr_spa_btn">家里</a>
+                                            <a href="" class="adr_spa_btn">父母家</a>
+                                            <a href="" class="adr_spa_btn">公司</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--下面部分-->
+                            <div class="showbottom">
+                                <div class="showbottom1">
+                                    <div class="showbottom_left">
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">收货人：</span>
+
+                                            <div class="showbottom_left_s_div">杨程</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">所在地区：</span>
+
+                                            <div class="showbottom_left_s_div">辽宁省沈阳市皇姑区</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">地址：</span>
+
+                                            <div class="showbottom_left_s_div">陵西街道怒江北街</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">手机：</span>
+
+                                            <div class="showbottom_left_s_div">156****8381</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">固定电话：</span>
+
+                                            <div class="showbottom_left_s_div"></div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">电子邮箱：</span>
+
+                                            <div class="showbottom_left_s_div">90*****88@qq.com</div>
+                                            <div class="clr"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="showbottom_right">
+                                        <div class="par">
+                                            <div class="showbottom_right_div">
+                                                <span class="showbottom_right_span">支付方式：</span>
+
+                                                <div class="showbottom_right_s_div">在线支付</div>
+                                                <div class="clr"></div>
+                                            </div>
+                                            <div class="showbottom_right_div">
+                                                <span class="showbottom_right_span">配送方式：</span>
+
+                                                <div class="showbottom_right_s_div_p">
+                                                    <div class="showbottom_right_s_div">京配区域内由京东快递配送</div>
+                                                    <div class="showbottom_right_s_div">京配区域外由第三方快递配送</div>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </div>
+                                        </div>
+                                        <div class="eidor">
+                                            <a href="" class="eidor_a">默认设置</a>
+                                            <a href="" class="eidor_a">编辑</a>
+                                        </div>
+
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+
+
+                        <!--地址2-->
+
+                        <div class="showadr">
+                            <!--上半部分-->
+                            <div class="showtop">
+                                <h3 class="h3">
+                                    玉泽演 韩国
+                                    <a class="showtop_a"></a>
+                                    <span class="showtop_span">一键购</span>
+
+                                </h3>
+                                <!--上面的右面删除部分-->
+                                <div class="delete">
+                                    <a class="delete_a">删除</a>
+                                </div>
+                                <!--小扳手里面的东西-->
+                                <div class="banshou">
+                                    <div class="banshou1">
+                                        <input type="text" class="banshou1_ipt">
+                                        <button class="banshou1_btn">保存</button>
+                                    </div>
+                                    <div class="banshou2">
+                                        <div class="banshou2_div">建议填写常用名称：</div>
+                                        <div class="banshou2_btn3">
+
+                                            <a href="" class="adr_spa_btn">家里</a>
+                                            <a href="" class="adr_spa_btn">父母家</a>
+                                            <a href="" class="adr_spa_btn">公司</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--下面部分-->
+                            <div class="showbottom">
+                                <div class="showbottom1">
+                                    <div class="showbottom_left">
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">收货人：</span>
+
+                                            <div class="showbottom_left_s_div">玉泽演</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">所在地区：</span>
+
+                                            <div class="showbottom_left_s_div">韩国首尔</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">地址：</span>
+
+                                            <div class="showbottom_left_s_div">中心</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">手机：</span>
+
+                                            <div class="showbottom_left_s_div">0082-2*****</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">固定电话：</span>
+
+                                            <div class="showbottom_left_s_div"></div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">电子邮箱：</span>
+
+                                            <div class="showbottom_left_s_div">oktaecyeon@com</div>
+                                            <div class="clr"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="showbottom_right">
+                                        <div class="par">
+                                            <div class="showbottom_right_div">
+                                                <span class="showbottom_right_span">支付方式：</span>
+
+                                                <div class="showbottom_right_s_div">在线支付</div>
+                                                <div class="clr"></div>
+                                            </div>
+                                            <div class="showbottom_right_div">
+                                                <span class="showbottom_right_span">配送方式：</span>
+
+                                                <div class="showbottom_right_s_div_p">
+                                                    <div class="showbottom_right_s_div">京配区域内由京东快递配送</div>
+                                                    <div class="showbottom_right_s_div">京配区域外由第三方快递配送</div>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </div>
+                                        </div>
+                                        <div class="eidor">
+                                            <a href="" class="eidor_a">默认设置</a>
+                                            <a href="" class="eidor_a">编辑</a>
+                                        </div>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <!--地址3-->
+                        <div class="showadr">
+                            <!--上半部分-->
+                            <div class="showtop">
+                                <h3 class="h3">
+                                    李俊昊 韩国
+                                    <a class="showtop_a"></a>
+                                    <span class="showtop_span">一键购</span>
+                                </h3>
+                                <!--上面的右面删除部分-->
+                                <div class="delete">
+                                    <a class="delete_a">删除</a>
+                                </div>
+                                <!--小扳手里面的东西-->
+                                <div class="banshou">
+                                    <div class="banshou1">
+                                        <input type="text" class="banshou1_ipt">
+                                        <button class="banshou1_btn">保存</button>
+                                    </div>
+                                    <div class="banshou2">
+                                        <div class="banshou2_div">建议填写常用名称：</div>
+                                        <div class="banshou2_btn3">
+
+                                            <a href="" class="adr_spa_btn">家里</a>
+                                            <a href="" class="adr_spa_btn">父母家</a>
+                                            <a href="" class="adr_spa_btn">公司</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--下面部分-->
+                            <div class="showbottom">
+                                <div class="showbottom1">
+                                    <div class="showbottom_left">
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">收货人：</span>
+
+                                            <div class="showbottom_left_s_div">李俊昊</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">所在地区：</span>
+
+                                            <div class="showbottom_left_s_div">韩国首尔</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">地址：</span>
+
+                                            <div class="showbottom_left_s_div">江南区清潭洞</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">手机：</span>
+
+                                            <div class="showbottom_left_s_div">0082-2*****</div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">固定电话：</span>
+
+                                            <div class="showbottom_left_s_div"></div>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="showbottom_left_div">
+                                            <span class="showbottom_left_span">电子邮箱：</span>
+
+                                            <div class="showbottom_left_s_div">LeeJunho@com</div>
+                                            <div class="clr"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="showbottom_right">
+                                        <div class="par">
+                                            <div class="showbottom_right_div">
+                                                <span class="showbottom_right_span">支付方式：</span>
+
+                                                <div class="showbottom_right_s_div">在线支付</div>
+                                                <div class="clr"></div>
+                                            </div>
+                                            <div class="showbottom_right_div">
+                                                <span class="showbottom_right_span">配送方式：</span>
+
+                                                <div class="showbottom_right_s_div_p">
+                                                    <div class="showbottom_right_s_div">京配区域内由京东快递配送</div>
+                                                    <div class="showbottom_right_s_div">京配区域外由第三方快递配送</div>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </div>
+                                        </div>
+                                        <div class="eidor">
+                                            <a href="" class="eidor_a">默认设置</a>
+                                            <a href="" class="eidor_a">编辑</a>
+                                        </div>
+
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        新增收货地址
+                        <div class="myadr myadr_bottom">
+                            <a href="javascript:;" id="myadr_a_b" class="myadr_a myadr_btn"
+                               onclick="alertAddAddressDiag()">新增收货地址</a>
+                    <span id="myadr_span_b">
+                    您已创建
+                    <span class="myadr_span_t" id="myadr_span1_b">3</span>
+                    个收货地址，最多可创建
+                    <span class="myadr_span_t" id="myadr_span2_b">20</span>
+                    个
+                    </span>
+                        </div>
+                        <div class="cleanfix"></div>
+                    </div>
+                </div>
+                <div class="Modalbackground">
+                </div>
+                <!--编辑收货地址的模态窗口-->
+                <div class="alertAddAddressDiag" id="Modal" style="width: 760px">
+                    <div>
+                        <div class="Modal1" style="width: 740px">
+                            <span>添加收货地址</span>
+                        </div>
+                        <div class="Modal2_P"
+                             style="width: 740px; height: 490px; padding-left: 10px; padding-right: 10px;">
+                            <div class="Modal2" id="addaddressdiag">
+                                <input type="text" style="display: none;">
+                                <!--收货人-->
+                                <div class="Modal21">
+                    <span class="Modal21_1">
+                        <em>*</em>
+                        收货人：
+                    </span>
+
+                                    <div class="Modal1_div">
+                                        <input type="text" class="Modal1_ipt name_ipt">
+                                        <span class="Modal1_spa name_ipt_s">请您填写收货人姓名</span>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <!--所在地区-->
+                                <div class="Modal1_div">
+                                    <input type="text" style="display: none">
+                                    <input type="text" style="display: none">
+                                    <input type="text" style="display: none">
+                                    <input type="text" style="display: none">
+                                    <input type="text" style="display: none">
+                                    <input type="text" style="display: none">
+                                    <input type="text" style="display: none">
+                                    <input type="text" style="display: none">
+                                    <input type="text" style="display: none">
+                    <span class="Modal21_1">
+                        <em>*</em>
+                        所在地区：
+                    </span>
+
+                                    <div>
+                                        <div class="Modalchoose_p">
+                                            <!--</div>上面的选择显示-->
+                                            <div class="Modalchoose">
+                                                <div class="choosedr">--请选择--</div>
+                                                <b></b>
+                                            </div>
+                                            <!--下面是display：none的事件-->
+                                            <!--省市县的选择部分-->
+                                            <div class="Modaladress">
+                                                <!--上面部分-->
+                                                <div class="Modaladress_a_p">
+                                                    <!--省-->
+                                                    <a class="Modaladress_a provinces">
+                                                        <em>请选择</em>
+                                                        <i></i>
+                                                    </a>
+                                                    <!--市-->
+                                                    <a class="Modaladress_a cities">
+                                                        <em>请选择</em>
+                                                        <i></i>
+                                                    </a>
+                                                    <!--县，区-->
+                                                    <a class="Modaladress_a areas">
+                                                        <em>请选择</em>
+                                                        <i></i>
+                                                    </a>
+                                                    <!--last-->
+                                                    <a class="Modaladress_a lasts">
+                                                        <em>请选择</em>
+                                                        <i></i>
+                                                    </a>
+                                                </div>
+                                                <!--城市的显示-->
+                                                <div>
+                                                    <!--省-->
+                                                    <div>
+                                                        <ul class="Modaladress_ul provinces_ul">
+                                                            <!--Li写在了数组中-->
+                                                        </ul>
+                                                    </div>
+                                                    <!--市-->
+                                                    <div>
+                                                        <ul class="Modaladress_ul1 cities_ul">
+                                                        </ul>
+                                                    </div>
+                                                    <!--县 区-->
+                                                    <div>
+                                                        <ul class="Modaladress_ul2 areas_ul">
+                                                        </ul>
+                                                    </div>
+                                                    <!--last-->
+                                                    <div>
+                                                        <ul class="Modaladress_ul3 lasts_ul">
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--×-->
+                                                <div class="Modaladress_close"></div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="clr"></div>
+                                    <!--详细地址-->
+                                    <div class="Modal21">
+                <span class="Modal21_1">
+                        <em>*</em>
+                        详细地址：
+                    </span>
+
+                                        <div>
+                                            <span></span>
+                                            <input type="text" class="detailadr_ipt adr_ipt">
+                                            <span class="Modal1_spa name_ipt_s">请您填写收货人详细地址</span>
+                                        </div>
+
+                                        <div class="clr"></div>
+                                    </div>
+                                    <!--手机号-->
+                                    <div class="Modal21">
+                                        <div class="Modal_Tele">
+                  <span class="Modal21_sj">
+
+                        手机号码：
+                    </span>
+                                            <input type="text" class="detailadr_ipt_sj">
+                                        </div>
+                                        <div class="Modal_Tele">
+                                            <span class="Modal_Tele_spa">或</span>
+                                        </div>
+                                        <div class="Modal_Tele">
+               <span class="Modal21_sj">
+
+                        固定电话：
+                    </span>
+                                            <input type="text" class="detailadr_ipt_sj Telephone_ipt">
+                                            <span class="Modal1_spa name_ipt_s">请您填写收货人手机号码</span>
+                                            <span class="clr"></span>
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                    <!--邮箱-->
+                                    <div class="Modal21">
+                <span class="Modal21_sj">
+
+                        邮箱：
+                    </span>
+
+                                        <div>
+                                            <input type="text" class="detailadr_ipt">
+                                        </div>
+                                        <span class="Modal1_spa"></span>
+
+                                        <div class="clr"></div>
+                                    </div>
+                                    <!--地址别名 三个按钮-->
+                                    <div class="Modal21">
+                                        <span class="Modal21_sj">地址别名：</span>
+                                        <input type="text" class="detailadr_ipt_sj">
+                                        <span class="adr"></span>
+                                        <span class="adr_spa">建议填写常用名称</span>
+                        <span class="btn3">
+    <a href="" class="adr_spa_btn">家里</a>
+    <a href="" class="adr_spa_btn">父母家</a>
+    <a href="" class="adr_spa_btn">公司</a>
+</span>
+                                    </div>
+                                    <!--保存地址-->
+                                    <div class="saveadress">
+                                        <a href="" class="saveadr">保存收货地址</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="Modal_close">×</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cleanfix"></div>
+            </div>
+        </div>
+        <div class="cleanfix"></div>
+    </div>
+</div>
+<!--下方服务-->
+<div class="byj_service">
+    <div class="byj_service_top">
+        <div id="byj_service_top" class="byj_addr_main">
+                <span class="byj_addr_serve"><img src="img/img_order/service_items_1.png"/><img
+                        src="img/img_order/service_items_2.png"/><img src="img/img_order/service_items_3.png"/><img
+                        src="img/img_order/service_items_4.png"/></span>
+        </div>
+    </div>
+    <div class="byj_service_bottom">
+        <div class="byj_addr_main byj_service_bottom_body">
+            <div class="byj_service_bottom_body_item">
+                <ul class="byj_service_item">
+                    <li class="byj_service_item1">购物指南</li>
+                    <li class="byj_service_item2"><a href="#">购物流程</a></li>
+                    <li class="byj_service_item2"><a href="#">会员介绍</a></li>
+                    <li class="byj_service_item2"><a href="#">生活旅行/团购</a></li>
+                    <li class="byj_service_item2"><a href="#">常见问题</a></li>
+                    <li class="byj_service_item2"><a href="#">大家电</a></li>
+                    <li class="byj_service_item2"><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+            <div class="byj_service_bottom_body_item">
+                <ul class="byj_service_item">
+                    <li class="byj_service_item1">配送方式</li>
+                    <li class="byj_service_item2"><a href="#">上门自提</a></li>
+                    <li class="byj_service_item2"><a href="#">211限时达</a></li>
+                    <li class="byj_service_item2"><a href="#">配送服务查询</a></li>
+                    <li class="byj_service_item2"><a href="#">配送费收取标准</a></li>
+                    <li class="byj_service_item2"><a href="#">海外配送</a></li>
+                </ul>
+            </div>
+            <div class="byj_service_bottom_body_item">
+                <ul class="byj_service_item">
+                    <li class="byj_service_item1">支付方式</li>
+                    <li class="byj_service_item2"><a href="#">货到付款</a></li>
+                    <li class="byj_service_item2"><a href="#">在线支付</a></li>
+                    <li class="byj_service_item2"><a href="#">分期付款</a></li>
+                    <li class="byj_service_item2"><a href="#">邮局汇款</a></li>
+                    <li class="byj_service_item2"><a href="#">公司转账</a></li>
+                </ul>
+            </div>
+            <div class="byj_service_bottom_body_item">
+                <ul class="byj_service_item">
+                    <li class="byj_service_item1">售后服务</li>
+                    <li class="byj_service_item2"><a href="#">售后政策</a></li>
+                    <li class="byj_service_item2"><a href="#">价格保护</a></li>
+                    <li class="byj_service_item2"><a href="#">退款说明</a></li>
+                    <li class="byj_service_item2"><a href="#">返修/退换货</a></li>
+                    <li class="byj_service_item2"><a href="#">取消订单</a></li>
+                </ul>
+            </div>
+            <div class="byj_service_bottom_body_item">
+                <ul class="byj_service_item">
+                    <li class="byj_service_item1">特色服务</li>
+                    <li class="byj_service_item2"><a href="#">夺宝岛</a></li>
+                    <li class="byj_service_item2"><a href="#">DIY装机</a></li>
+                    <li class="byj_service_item2"><a href="#">延保服务</a></li>
+                    <li class="byj_service_item2"><a href="#">京东E卡</a></li>
+                    <li class="byj_service_item2"><a href="#">京东通信</a></li>
+                    <li class="byj_service_item2"><a href="#">京东JD+</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //图片上传预览    IE是用了滤镜。
+    function previewImage(file) {
+        var MAXWIDTH = 90;
+        var MAXHEIGHT = 90;
+        var div = document.getElementById('byj_img_l_bottom');
+        if (file.files && file.files[0]) {
+            div.innerHTML = '<img id=byj_bigimg onclick=$("#previewImg").click()>';
+            var img = document.getElementById('byj_bigimg');
+            img.onload = function () {
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width = rect.width;
+                img.height = rect.height;
+//                 img.style.marginLeft = rect.left+'px';
+                img.style.marginTop = rect.top + 'px';
+            }
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                img.src = evt.target.result;
+            }
+            reader.readAsDataURL(file.files[0]);
+        }
+        else //兼容IE
+        {
+            var sFilter = 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=byj_bigimg>';
+            var img = document.getElementById('byj_bigimg');
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status = ('rect:' + rect.top + ',' + rect.left + ',' + rect.width + ',' + rect.height);
+            div.innerHTML = "<div id=divhead style='width:" + rect.width + "px;height:" + rect.height + "px;margin-top:" + rect.top + "px;" + sFilter + src + "\"'></div>";
+        }
+    }
+    function clacImgZoomParam(maxWidth, maxHeight, width, height) {
+        var param = {top: 0, left: 0, width: width, height: height};
+        if (width > maxWidth || height > maxHeight) {
+            rateWidth = width / maxWidth;
+            rateHeight = height / maxHeight;
+
+            if (rateWidth > rateHeight) {
+                param.width = maxWidth;
+                param.height = Math.round(height / rateWidth);
+            } else {
+                param.width = Math.round(width / rateHeight);
+                param.height = maxHeight;
+            }
+        }
+        param.left = Math.round((maxWidth - param.width) / 2);
+        param.top = Math.round((maxHeight - param.height) / 2);
+        return param;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+#fk{
+    margin:0 auto;
+    width:1072px;
+    height:470px;
+    background-color: #cccccc;
+}
+/* 爱逛的大框架*/
+#ag{
+    width:535px;
+    height:450px;
+    background-color: #cccccc;
+    float: left;
+
+}
+/* 爱美丽的大框架*/
+#aml{
+    width:535px;
+    height:450px;
+    background-color: #cccccc;
+    float: right;
+
+}
+/* 爱逛的头部小长条*/
+#ag_head{
+    width:100%;
+    height:50px;
+    background-color: rgba(176, 76, 136, 0.9);
+    line-height: 50px;
+}
+/* 爱美丽的头部小长条*/
+#aml_head{
+    width:100%;
+    height:50px;
+    background-color: #e43c66;
+    line-height: 50px;
+}
+#ag_head span{
+    padding-left:30px;
+    font-size: 22px;
+    color: #fff;
+}
+#aml_head span{
+    padding-left:30px;
+    font-size: 22px;
+    color: #fff;
+}
+/* 爱逛的头部链接*/
+#ag_head a{
+     padding:5px 10px 5px 10px;
+     text-decoration: none;
+     font-size: 10px;
+     background-color: rgba(228, 141, 192, 0.76);
+     color: #fff;
+     margin: 5px;
+ }
+#ag_head_a a:hover{
+    background-color: rgba(228, 16, 225, 0.3);
+}
+#ag_head_a{
+    float: right;
+    list-style-type:none;
+}
+
+/* 爱美丽的头部链接*/
+#aml_head a{
+    padding:5px 10px 5px 10px;
+    text-decoration: none;
+    font-size: 10px;
+    background-color: #CC6077;
+    color: #fff;
+    margin: 5px;
+}
+#aml_head_a a:hover{
+    background-color: #ff4472;
+}
+#aml_head_a{
+    float: right;
+    list-style-type:none;
+}
+
+/*爱逛中间部分*/
+#ag_middle{
+    width:100%;
+    height:250px;
+    background-color: rgba(255, 255, 255, 0.9);
+    line-height: 50px;
+}
+/*爱逛中间左部图片部分*/
+#ag_middle_left{
+    float: left;
+    height: 100%;
+}
+#ag_middle_left img{
+    width:160px;
+    height:auto;
+    padding: 10px;
+}
+/*爱逛中间右部大框架*/
+#ag_middle_right{
+    width:350px;
+    height:230px ;
+    background-color: #cccccc;
+    float: right;
+    margin-top: 7px;
+
+}
+/*爱美丽中间部分*/
+#aml_middle{
+    width:100%;
+    height:250px;
+    background-color: rgba(255, 255, 255, 0.9);
+    line-height: 50px;
+}
+/*爱美丽中间左部图片部分*/
+#aml_middle_left{
+    float: left;
+    height: 100%;
+}
+#aml_middle_left img{
+    width:160px;
+    height:auto;
+    padding: 10px;
+}
+/*爱美丽中间右部大框架*/
+#aml_middle_right{
+    width:350px;
+    height:230px ;
+    background-color: #cccccc;
+    float: right;
+    margin-top: 7px;
+    margin-right: 2px;
+}
+
+/*爱逛中间右部  八部分大框架*/
+
+/*1. 型格男装部分整体左浮动*/
+#ag_middle_right_1{
+    background-color: #ffffff;
+    width:174px;
+    float: left;
+    height:114px;
+}
+/*2.女装盛宴部分整体右浮动*/
+#ag_middle_right_2{
+    background-color: #ffffff;
+    width:174px;
+    float: right;
+    height:114px;
+
+}
+/*3.品质腰带部分整体左浮动*/
+#ag_middle_right_3{
+    background-color: #ffffff;
+    width:174px;
+    float: left;
+    height:114px;
+    margin-top: 2px;
+}
+/*4.女装盛宴部分整体右浮动*/
+#ag_middle_right_4{
+    background-color: #ffffff;
+    width:174px;
+    float: right;
+    height:114px;
+    margin-top: 2px;
+}
+/*5.美妆馆部分整体左浮动*/
+#aml_middle_right_1{
+    background-color: #ffffff;
+    width:174px;
+    float: left;
+    height:114px;
+}
+/*6.面部护肤部分整体左浮动*/
+#aml_middle_right_2{
+    background-color: #ffffff;
+    width:174px;
+    float: right;
+    height:114px;
+}
+/*7.香水彩妆部分整体左浮动*/
+#aml_middle_right_3{
+    background-color: #ffffff;
+    width:174px;
+    float: left;
+    height:114px;
+    margin-top: 2px;
+}
+/*8.个护馆部分整体右浮动*/
+#aml_middle_right_4{
+    background-color: #ffffff;
+    width:174px;
+    float: right;
+    height:114px;
+    margin-top: 2px;
+}
+
+
+/*左右两边中间右部  八部分合一*/
+/*5.四部分字都整体左浮动*/
+.middle_right_font{
+    float: left;
+}
+
+/*6.四部分  大字*/
+.big_font{
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+/*7.四部分字的链接*/
+#xgnz a,#nzsy a,#pzyd a,#xxxb a,#mzg a,#mbhf a,#xscz a,#ghg a{
+    text-decoration: none;
+    float: left;
+    color: rgba(176, 76, 136, 0.9);
+}
+
+/*8.四部分  小字字体设置*/
+.small_font{
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(187, 187, 187);
+}
+
+/*9.四部分图片*/
+.middle_right_img{/*型格男装,女装盛宴图片*/
+    float: right;
+   /* margin-top: 10px;*/
+    text-align:center;
+    width:80px;
+    height: 90px;
+    margin-right: 10px;
+    margin-top: 15px;
+
+}
+/*清浮动*/
+.clear{
+    clear: both;
+}
+/*爱逛下部分*/
+/*#ag_bottom{
+    width: 535px;
+    height: 140px;
+    float: left;
+    margin: 0;
+}*/
+
+/*爱逛下部分  大图片*/
+#ag_bottom{
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 2px;
+}
+.bottom_img img{
+    width: 170px;
+    height: auto;
+    float: left;
+}
+#ag_bottom_1{/*第一个图*/
+    margin-left: 13px;
+}
+#ag_bottom_2{/*第二个图*/
+    position: relative;
+    left: 7px;
+}
+/*爱逛下部分  小图片*/
+#ag_bottom_small{
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.bottom_small_img{
+    width: 15%;
+    height: auto;
+    float: left;
+    margin-top: 5px;
+}
+#ag_bottom_small_1{
+    margin-left:40px;
+}
+ a:hover img{
+    filter:alpha(Opacity=80);
+    -moz-opacity:0.6;opacity: 0.6;
+}
+
+/*爱美丽下部分  大图片*/
+#aml_bottom{
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 2px;
+    border-right: 2px solid rgb(239, 239, 239);
+}
+.bottom_img{
+    width: 32%;
+    height: auto;
+    float: right;
+    margin-top: 4px;
+}
+#aml_bottom_1{/*第一个图*/
+    margin-left: 13px;
+}
+#aml_bottom_2{/*第二个图*/
+    position: relative;
+    left: 7px;
+}
+/*爱美丽下部分  小图片*/
+#aml_bottom_small{
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.bottom_small_img{
+    width: 15%;
+    height: 36px;
+    float: left;
+}
+#aml_bottom_small_1{
+    margin-left:40px;
+}

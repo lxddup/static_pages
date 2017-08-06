@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url(css/common1.css);
+    </style>
+    <link rel="stylesheet" href="css/shoppingManage.css" type="text/css">
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/common1.js"></script>
+    <!--<script src="js/shoppingManage.js"></script>-->
+    <!--<link rel="stylesheet" href="css/common1.css" type="text/css">-->
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+    <tr>
+        <td class="td-header" colspan="2"><!--colspan=2代表将它与右侧单元格合并-->
+            <div class="header">
+                <div class="top-admin" id="top-admin">
+                    <div class="top-admin-item" id="top-admin-item">
+                        <a href="javascript:;">
+                            <span class="icon icon-admin-avatar"></span>
+                            tester(后台测试体验组)
+                        </a>
+                    </div>
+                    <div class="top-admin-sub" id="top-admin-sub">
+                        <ul>
+                            <li><a href="#" id="edit_password" target="mainframe">
+                                <span class="icon icon-password-change"></span>
+                                修改密码
+                            </a></li>
+                            <li class="help-1">
+                                <a href="#" class="openwbs_help" target="mainframe">
+                                    <span class="icon icon-help"></span>
+                                    使用帮助
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" style="border-bottom:none">
+                                    <span class="icon icon-logout"></span>
+                                    安全退出系统
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="top-menu">
+                    <ul class="menu">
+                        <li class="m">
+                            <a href="#" class="m" target="mianframe">桌面</a>
+                        </li>
+                        <li class="m">
+                            <a href="#" class="m" target="mianframe">系统
+                            <span class="caret"></span></a>
+                        </li>
+                        <li class="m">
+                            <a href="#" class="m" target="mianframe">内容
+                                <span class="caret"></span></a>
+                        </li>
+                            <li  class="m"><a href="#" class="m" target="mianframe">商城
+                                <span class="caret"></span></a>
+                            </li>
+                        <li  class="m"><a href="#" class="m" target="mianframe">订单
+                                <span class="caret"></span></a>
+                        </li>
+                        <li  class="m"><a href="#" class="m" target="mianframe">营销
+                                <span class="caret"></span></a>
+                        </li>
+                        <li class="m"> <a href="#" class="m" target="mianframe">统计
+                                <span class="caret"></span></a>
+                        </li>
+                        <li class="m"><a href="#" class="m" target="mianframe">用户
+                                <span class="caret"></span></a>
+                        </li>
+                        <li class="m"><a href="#" class="m" target="mianframe">应用
+                                <span class="caret"></span></a>
+                        </li>
+                        <li class="m"> <a href="#" class="m" target="mianframe">日志
+                                <span class="caret"></span></a>
+                        </li>
+                    </ul>
+                    <div class="ow-website"><a href="main.html">网站预览</a></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top"><!--纵向对齐-->
+            <div id="leftpannel">
+                <div id="left-menu" style="height:413px;">
+                    <div class="websites"></div><!--咱用不上-->
+                    <div class="wrapper">
+                        <dl>
+                            <dt>
+                                <div class="l-tabbar">
+                                    <ul>
+                                        <li class="tab1" name="tab" tab="1"><a href="#">内容管理</a></li>
+                                        <li class="tab1" name="tab" tab="2"><a href="#">商品管理</a></li>
+                                    </ul>
+                                </div>
+                            </dt>
+                            <dd>
+                                <div is_tab="true" tab="1">
+                                    <ul class="left-menu">
+                                        <li class="m">
+                                            <a href="#" class="m m-foldr" target="mainframe">公司简介
+                                                <div class="sub_menu sub_menu_1"></div>
+                                            <i></i>
+                                            </a>
+                                        </li>
+                                        <li class="m">
+                                            <a href="#" class="m" target="mainframe">新闻资讯
+                                                <div class="sub_menu sub_menu_2"></div>
+                                                <i></i>
+                                            </a>
+                                        </li>
+                                        <li class="m">
+                                            <a href="#" class="m m-foldr" target="mainframe">案例展示
+                                                <div class="sub_menu sub_menu_1"></div>
+                                                <i></i>
+                                            </a>
+                                        </li>
+                                        <li class="m">
+                                            <a href="#" class="m m-foldr" target="mainframe">下载中心
+                                                <div class="sub_menu sub_menu_1"></div>
+                                                <i></i>
+                                            </a>
+                                        </li>
+                                        <li class="m">
+                                            <a href="#" class="m m-foldr" target="mainframe">视频中心
+                                                <div class="sub_menu sub_menu_1"></div>
+                                                <i></i>
+                                            </a>
+                                        </li>
+                                        <li class="m">
+                                            <a href="#" class="m m-foldr" target="mainframe">人才招聘
+                                                <div class="sub_menu sub_menu_1"></div>
+                                            </a>
+                                        </li>
+                                        <li class="m">
+                                            <a href="#" class="m m-foldr" target="mainframe">常见问题
+                                                <div class="sub_menu sub_menu_1"></div>
+                                                <i></i>
+                                            </a>
+                                        </li>
+                                        <li class="m">
+                                            <a href="#" class="m m-foldr" target="mainframe">其他单页
+                                                <div class="sub_menu sub_menu_1"></div>
+                                                <i></i>
+                                            </a>
+                                        </li>
+                                        <li class="m m-cate-edit">
+                                            <a href="#" class="cate-edit" target="mainframe"><i></i>内容管理栏目</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="shop-cate" is_tab="true" tab="2" style="display:none">
+                                    <ul class="left-menu">
+                                        <li class="m"><a href="#" class="m" target="mainframe">所有商品列表</a></li>
+                                        <li class="m"><a href="#" class="m" target="mainframe">手机数码产品</a></li>
+                                        <li class="m"><a href="#" class="m" target="mainframe">笔记本平板</a></li>
+                                        <li class="m"><a href="#"  class="m" target="mainframe">智能硬件</a></li>
+                                        <li class="m"><a href="#"  class="m" target="mainframe">耳机/音响/配件</a></li>
+                                        <li class="m"><a href="#"  class="m"target="mainframe">移动电源/电池/插线板</a></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td class="skinright" valign="top" width="100%">
+            <div id="mainframeBox" style="overflow:hidden;height:393px;width:1185px;">
+                <iframe src="recodeList.html" name="mainframe" id="mainframe"class="mainframe" frameborder="0"
+                       style="margin:0;padding:0;height:393px;width:1168px;" hidefocus >
+                </iframe>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common1.css">
+    <link rel="stylesheet" href="css/shoppingManage.css">
+    <link rel="stylesheet" href="css/listManage.css">
+
+</head>
+<body style="padding:0">
+<div class="breadcrumb">
+    <div class="help-grid">
+        <a href="#" class="reload" onclick="window.location.reload();">刷新</a>
+        <a href="#" class="help" id="openwbs_help" ctl="goods" act="list" target="mainframe">帮助</a>
+    </div>
+    <span class="loc">
+        主站点
+        <em>>></em>订单管理<em>>></em>订单列表<em>>></em>
+    </span>
+    <div class="mbody">
+        <div class="top-area">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                <tr>
+                    <td class="do-cell">
+                        <div class="do-cell-name">添加操作区</div>
+                        <div class="do-cell-btn"><a class="btn btn-primary" id="add_new" href="#">添加新订单</a></div>
+                    </td>
+                    <td class="do-cell">
+                        <div class="do-cell-name">删除操作区</div>
+                        <div class="do-cell-btn">
+                            <button class="btn" id="delete_selected">批量删除</button>
+                        </div>
+                    </td>
+                    <td class="do-cell">
+                        <div class="do-cell-btn">
+                            <form action="" class="ow-search-form" name="search_form" method="post">
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <dl class="item">
+                                                <dt>起始日期 <a href="#" class="clear">清除</a></dt>
+                                                <dd>
+                                                    <input type="text" class="text text-datatime"id="time_start" name="time_start">
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl class="item">
+                                                <dt>结束日期 <a href="#" class="clear">清除</a></dt>
+                                                <dd>
+                                                    <input type="text" class="text text-datatime" id="time_end" name="time_end">
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="do-cell">
+                        <div class="do-cell-name">搜索操作区</div>
+                        <div class="do-cell-btn">
+                            <form action="" class="search-form" name="search-form">
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="padding-right: 5px">
+                                            <select name="status" id="">
+                                                <option value="0" selected="selected">订单号</option>
+                                                <option value="1">已上架</option>
+                                                <option value="2">已下架</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="text" name="keywords" maxlength="100" value>
+                                        </td>
+                                        <td style="padding-left:5px;">
+                                            <button type="submit" class="btn">搜索</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </form>
+                        </div>
+                    </td>
+                    <td class="do-cell">
+                        <div class="do-cell-name">导出操作区</div>
+                        <div class="do-cell-btn">
+                            <button class="btn" id="export_selected">批量导出为Excel(xls)文件</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="list-area" id="data_list_area">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="listTable">
+                <thead>
+                <tr class="thead eline">
+                    <th style="padding:0 5px 0 8px">
+                        <input type="checkbox" name="select_all" id="select_all">
+                    </th>
+                    <th>gid</th>
+                    <th>商品</th>
+                    <th>库存</th>
+                    <th>售价</th>
+                    <th>浏览量</th>
+                    <th>评论量</th>
+                    <th>佣金</th>
+                    <th>状态</th>
+                    <th>推荐</th>
+                    <th>排序</th>
+                    <th>所属栏目</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="data" value="1" i="1">
+                    <td style="padding:0px 5px 0px 8px;width:1%">
+                        <input type="checkbox" name="data-checkbox" value="1">
+                    </td>
+                    <td filed="gid" value="1">
+                        <a href="#">1</a>
+                    </td>
+                    <td field="goods" value="【预定演示】预定小米5s Plus">
+                        <div class="ow-goods-item">
+                            <div class="thumb">
+                                <a href="#" target="_blank"><img src="" alt=""></a>
+                            </div>
+                            <div class="info">
+                                <div class="title">
+                                    <span class="is-book-1">【预定】</span>
+                                    <a href="#" name="title" target="_blank">【预定演示】预定小米5s Plus</a>
+                                </div>
+                                <div class="goods-sn"> OWS0000001</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td filed="stock" value="764">764</td>
+                    <td filed="price" value="4.9"><em class="money-sb">￥</em>4.90</td>
+                    <td field="views" value="909">909</td>
+                    <td field="comments" value="0">0</td>
+                    <td field="commission_rate" value="50">50元</td>
+                    <td field="status" value="0">
+                        <a href="#" class="status-0" title="点击可设置为下架状态"value="0">已上架</a>
+                    </td>
+                    <td filed="recommend" value="1"><a href="#" class="attr-value-1" title="点击取消推荐" value="1">是</a></td>
+                    <td filed="sequence" value="1">
+                        <div class="list-order-cell">
+                            <a href="#" class="arrow-up" title="升序"></a>
+                            <a href="#" class="arrow-down" title="降序"></a>
+                            <input class="text list-order">
+                        </div>
+                    </td>
+                    <td filed="cate_name" value="手机数码产品">手机数码产品</td>
+                    <td name="opeation" class="td-opeation">
+                        <a href="#" class="btn btn-small btn-primary mr5" name="edit">编辑</a>
+                        <a href="#" class="btn btn-small mr5" name="remove">移动</a><br/>
+                        <a href="#" class="btn btn-small mr5" name="remove">咨询</a>
+                        <a href="#" class="btn btn-small mr5" name="comment_manage">评价</a>
+                        <a href="#" class="btn btn-small" name="delete">删除</a>
+
+                    </td>
+
+
+                </tr>
+                <tr class="data" value="2" i="2">
+                    <td style="padding:0px 5px 0px 8px;width:1%">
+                        <input type="checkbox" name="data-checkbox" value="2">
+                    </td>
+                    <td filed="gid" value="2">
+                        <a href="#">2</a>
+                    </td>
+                    <td field="goods" value="【预定演示】预定小米5s Plus">
+                        <div class="ow-goods-item">
+                            <div class="thumb">
+                                <a href="#" target="_blank"><img src="" alt=""></a>
+                            </div>
+                            <div class="info">
+                                <div class="title">
+                                    <span class="is-book-1">【预定】</span>
+                                    <a href="#" name="title" target="_blank">【预定演示】预定小米5s Plus</a>
+                                </div>
+                                <div class="goods-sn"> OWS0000001</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td filed="stock" value="764">764</td>
+                    <td filed="price" value="4.9"><em class="money-sb">￥</em>4.90</td>
+                    <td field="views" value="909">909</td>
+                    <td field="comments" value="0">0</td>
+                    <td field="commission_rate" value="50">50元</td>
+                    <td field="status" value="0">
+                        <a href="#" class="status-0" title="点击可设置为下架状态"value="0">已上架</a>
+                    </td>
+                    <td filed="recommend" value="1"><a href="#" class="attr-value-1" title="点击取消推荐" value="1">是</a></td>
+                    <td filed="sequence" value="1">
+                        <div class="list-order-cell">
+                            <a href="#" class="arrow-up" title="升序"></a>
+                            <a href="#" class="arrow-down" title="降序"></a>
+                            <input class="text list-order">
+                        </div>
+                    </td>
+                    <td filed="cate_name" value="手机数码产品">手机数码产品</td>
+                    <td name="opeation" class="td-opeation">
+                        <a href="#" class="btn btn-small btn-primary mr5" name="edit">编辑</a>
+                        <a href="#" class="btn btn-small mr5" name="remove">移动</a><br/>
+                        <a href="#" class="btn btn-small mr5" name="remove">咨询</a>
+                        <a href="#" class="btn btn-small mr5" name="comment_manage">评价</a>
+                        <a href="#" class="btn btn-small" name="delete">删除</a>
+
+                    </td>
+
+
+                </tr>
+                <tr class="data" value="3" i="3">
+                    <td style="padding:0px 5px 0px 8px;width:1%">
+                        <input type="checkbox" name="data-checkbox" value="1">
+                    </td>
+                    <td filed="gid" value="3">
+                        <a href="#">3</a>
+                    </td>
+                    <td field="goods" value="【预定演示】预定小米5s Plus">
+                        <div class="ow-goods-item">
+                            <div class="thumb">
+                                <a href="#" target="_blank"><img src="" alt=""></a>
+                            </div>
+                            <div class="info">
+                                <div class="title">
+                                    <span class="is-book-1">【预定】</span>
+                                    <a href="#" name="title" target="_blank">【预定演示】预定小米5s Plus</a>
+                                </div>
+                                <div class="goods-sn"> OWS0000001</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td filed="stock" value="764">764</td>
+                    <td filed="price" value="4.9"><em class="money-sb">￥</em>4.90</td>
+                    <td field="views" value="909">909</td>
+                    <td field="comments" value="0">0</td>
+                    <td field="commission_rate" value="50">50元</td>
+                    <td field="status" value="0">
+                        <a href="#" class="status-0" title="点击可设置为下架状态"value="0">已上架</a>
+                    </td>
+                    <td filed="recommend" value="1"><a href="#" class="attr-value-1" title="点击取消推荐" value="1">是</a></td>
+                    <td filed="sequence" value="1">
+                        <div class="list-order-cell">
+                            <a href="#" class="arrow-up" title="升序"></a>
+                            <a href="#" class="arrow-down" title="降序"></a>
+                            <input class="text list-order">
+                        </div>
+                    </td>
+                    <td filed="cate_name" value="手机数码产品">手机数码产品</td>
+                    <td name="opeation" class="td-opeation">
+                        <a href="#" class="btn btn-small btn-primary mr5" name="edit">编辑</a>
+                        <a href="#" class="btn btn-small mr5" name="remove">移动</a><br/>
+                        <a href="#" class="btn btn-small mr5" name="remove">咨询</a>
+                        <a href="#" class="btn btn-small mr5" name="comment_manage">评价</a>
+                        <a href="#" class="btn btn-small" name="delete">删除</a>
+
+                    </td>
+
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="ow-dialog" role="dialog" id="d_add_new" style="position:absolute;left:362px;top:42px;z-index:1903;background: #fff">
+    <div class="ow-dialog-wrapper">
+        <table border="0" cellpadding="0" cellspacing="0" class="ow-dialog-inner">
+            <tbody>
+            <tr>
+                <td class="ow-dialog-header">
+                    <div class="ow-dialog-titleBar" id="d_add_new_titleBar">
+                        <div class="ow-dialog-title" id="d_add_new_title">选择商品栏目</div>
+                        <a href="#" class="ow-dialog-close" id="d_add_new_close" href="#"></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ow-dialog-main">
+                    <div class="ow-dialog-content" id="d_add_new_content" style="padding:0;width:400px;">
+                        <div class="add_type" id="add_window">
+                            <div class="post-form">
+                                <dl>
+                                    <dt class="label">添加到</dt>
+                                    <dd>
+                                        <div name="category_section">
+                                            <select name="categoray_section" id="">
+                                                <option cate_name="手机数码产品" cate_type="0" model_id="10" value="101">手机数码产品</option>
+                                                <option cate_name="华为手机" cate_type="0" model_id="10" value="109">华为手机</option>
+                                                <option cate_name="苹果手机" cate_type="0" model_id="10" value="110">苹果手机</option>
+                                            </select>
+                                        </div>
+                                        <div class="pt5">
+                                            <span class="t-normal" name="t_category">灰色的为不可选栏目</span>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="ow-dialog-footer">
+                    <div class="ow-dialog-button" id="d_add_new_buttons">
+                        <button class="btn btn-primary">确定</button>
+                        <button class="btn">取消</button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="ow-dialog-shadow" id="d_add_new_shadow" style="z-index:1902"></div>
+<!--添加用户信息-->
+<div class="au-dialog">
+    <div></div>
+</div>
+<!--结束添加用户信息-->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/shoppingManage.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/*大框架*/
+#hott{
+    width: 1072px;
+    margin: 0 auto;
+    height: 475px;
+    background-color: #F75C3D;
+    overflow: hidden;
+}
+/*左边的一大块*/
+.hott_a{
+    width: 245px;
+    height:100%;
+    float: left;
+}
+/*全体图片hover改变透明度*/
+a:hover img{
+    filter:alpha(Opacity=80);
+    -moz-opacity:0.8;opacity: 0.8;
+}
+/*右半部大框架*/
+#right{
+    float: left;
+    width: 827px;
+}
+#right ul{
+    padding-left: 0;
+}
+/*ul里上边两排img大小调整*/
+.li_1{
+    list-style: none;
+    float: left;
+    width:160px;
+    padding-right: 5px;
+}
+.ul_img {
+    width: 160px;
+}
+/*ul里下边一排img大小调整*/
+.li_2{
+    list-style: none;
+    float: left;
+    width:200px;
+    padding-right: 6px;
+}
+.ul_img_bottom {
+    width: 200px;
+}
+#li_bottom_last{
+    list-style: none;
+    float: left;
+    width:200px;
+    padding-left:2px;
+}
+

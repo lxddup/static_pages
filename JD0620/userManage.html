@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common1.css">
+    <link rel="stylesheet" href="css/shoppingManage.css">
+    <link rel="stylesheet" href="css/userManage.css">
+</head>
+<body style="padding:0"><!--用户管理-->
+<div class="breadcrumb">
+    <div class="help-grid">
+        <a href="#" class="reload" onclick="window.location.reload();">刷新</a>
+        <a href="#" class="help" id="openwbs_help" ctl="goods" act="list" target="mainframe">帮助</a>
+    </div>
+    <span class="loc">
+        主站点
+        <em>>></em>会员管理<em>>></em>会员列表<em>>></em>
+    </span>
+    <div class="mbody">
+        <div class="top-area">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                <tr>
+                    <td class="do-cell">
+                        <div class="do-cell-name">添加新会员</div>
+                        <div class="do-cell-btn"><a class="btn btn-primary" id="add_new" href="#">添加新会员</a></div>
+                    </td>
+                    <td class="do-cell">
+                        <div class="do-cell-name">删除操作区</div>
+                        <div class="do-cell-btn">
+                            <button class="btn" id="delete_selected">批量删除</button>
+                        </div>
+                    </td>
+                    <td class="do-cell">
+                        <div class="d0-cell-name">搜索操作区</div>
+                        <div class="do-cell-btn">
+                            <form action="" class="ow-search-form" name="search_form" method="post">
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="padding-right:5px">
+                                            <select name="member_group" id="member_group">
+                                                <!--选择会员组，后台遍历-->
+                                                <option value="0">选择会员组</option>
+                                                <optgroup label="会员组">
+                                                    <option value="9">初级会员</option>
+                                                </optgroup>
+                                                <optgroup label="特殊会员组">
+                                                    <option value="9">初级会员</option>
+                                                </optgroup>
+                                            </select>
+                                        </td>
+                                        <td style="padding-right:5px">
+                                            <select name="status">
+                                                <option value="1">状态...</option>
+                                                <option selected="selected" value="0">正常</option>
+                                                <option value="1">冻结</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="keywords_type">
+                                                <option value="username">编号</option>
+                                                <option value="uid">登录名</option>
+                                                <option value="mobile">真实名</option>
+                                                <option value="email">身份证号</option>
+                                                <option value="email">手机号</option>
+                                                <option value="email">性别</option>
+                                                <option value="email">出生日期</option>
+                                                <option value="email">感兴趣的商品分类</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="text" name="keywords" style="width:150px;">
+                                        </td>
+                                        <td style="padding-left:5px">
+                                            <button type="submit" class="btn">搜索</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </td>
+                    <td class="do-cell">
+                        <div class="do-cell-name">发送消息</div>
+                        <div class="do-cell-btn">
+                            <button class="btn" id="send_system_msg">群发用户消息</button>
+                        </div>
+                    </td>
+                    <td class="do-cell">
+                        <div class="do-cell-name">导出操作区</div>
+                        <div class="do-cell-btn">
+                            <button class="btn" id="export_selected">批量导出为Excel(xls)文件</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="list-area" id="data_list_area">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="listTable">
+                <thead>
+                <tr class="thead eline">
+                    <th style="padding:0 5px 0 8px">
+                        <input type="checkbox" name="select_all" id="select_all">
+                    </th>
+                    <th>uid</th>
+                    <th>登录名</th>
+                    <th>真实名</th>
+                    <th>密码</th>
+                    <th>身份证号</th>
+                    <th>手机号</th>
+                    <th>性别</th>
+                    <th>出生日期</th>
+                    <th>感兴趣的商品分类</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="data" value="1" i="1">
+                    <td style="padding:0px 5px 0px 8px;width:1%">
+                        <input type="checkbox" name="data-checkbox" value="1">
+                    </td>
+                    <td filed="gid" value="1">
+                        <a href="#">1</a>
+                    </td>
+                    <td field="logoname" value="name">
+                       某某某
+                    </td>
+                    <td filed="truename" value="truename">杰克</td>
+                    <td filed="password" value="password">150584488487856</td>
+                    <td field="idcode" value="idcode">8888888888888888</td>
+                    <td field="phonecode" value="phonecode">13100887329</td>
+                    <td field="sex" value="50">女</td>
+                    <td field="lovesort" value="0">
+                       夏装
+                    </td>
+                    <td field="birthday">2015-05-20</td>
+                    <td name="opeation" class="td-opeation">
+                        <a href="#" class="btn btn-small btn-primary mr5" name="edit">编辑</a>
+                        <a href="#" class="btn btn-small mr5" name="remove">移动</a><br/>
+                        <a href="#" class="btn btn-small mr5" name="remove">咨询</a>
+                        <a href="#" class="btn btn-small mr5" name="comment_manage">评价</a>
+                        <a href="#" class="btn btn-small" name="delete">删除</a>
+
+                    </td>
+
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="ow-dialog" role="dialog" id="d_add_new" style="position:absolute;left:362px;top:42px;z-index:1903;background: #fff">
+    <div class="ow-dialog-wrapper">
+        <table border="0" cellpadding="0" cellspacing="0" class="ow-dialog-inner">
+            <tbody>
+            <tr>
+                <td class="ow-dialog-header">
+                    <div class="ow-dialog-titleBar" id="d_add_new_titleBar">
+                        <div class="ow-dialog-title" id="d_add_new_title">选择商品栏目</div>
+                        <a href="#" class="ow-dialog-close" id="d_add_new_close" href="#"></a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="ow-dialog-main">
+                    <div class="ow-dialog-content" id="d_add_new_content" style="padding:0;width:400px;">
+                        <div class="add_type" id="add_window">
+                            <div class="post-form">
+                                <dl>
+                                    <dt class="label">添加到</dt>
+                                    <dd>
+                                        <div name="category_section">
+                                            <select name="categoray_section" id="">
+                                                <option cate_name="手机数码产品" cate_type="0" model_id="10" value="101">手机数码产品</option>
+                                                <option cate_name="华为手机" cate_type="0" model_id="10" value="109">华为手机</option>
+                                                <option cate_name="苹果手机" cate_type="0" model_id="10" value="110">苹果手机</option>
+                                            </select>
+                                        </div>
+                                        <div class="pt5">
+                                            <span class="t-normal" name="t_category">灰色的为不可选栏目</span>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="ow-dialog-footer">
+                    <div class="ow-dialog-button" id="d_add_new_buttons">
+                        <button class="btn btn-primary">确定</button>
+                        <button class="btn">取消</button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="ow-dialog-shadow" id="d_add_new_shadow" style="z-index:1902"></div>
+<!--添加用户信息-->
+<div class="au-dialog">
+    <div></div>
+</div>
+<!--结束添加用户信息-->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/shoppingManage.js"></script>
+</body>
+</html>
